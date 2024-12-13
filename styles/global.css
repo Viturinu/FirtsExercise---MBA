@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /*cores*/
+    --pink: #d658b3;
+    --green: #45b442;
+    --white: #ffffff;
+    --bg-color: #e9e7e9;
+    --gray-700: #332b31;
+    --gray-600: #4a4448;
+    --gray-500: #756c71;
+    --gray-400: #d3cfd2;
+    --gray-300: #dfdcdf;
+
+    /*fonte*/
+    --ff-sans: "Oxygen", serif;
+
+    --fw-light: 300;
+    --fw-base: 400;
+    --fw-bold: 700;
+
+    /*tamanhos de fonte*/
+    /*rem olha sempre pra font base do navegador, que é 16px default (exceto se for alterado pelo usuário)*/
+    --fs-sm: 0.75rem;
+    --fs-base: 0.875rem;
+    --fs-lg: 1rem;
+    --fs-xl: 1.125rem;
+    --fs-2xl: 1.5rem;
+    
+}
+
+html{
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-base);
+    font-size: var(--fs-lg);
+
+    color: var(--gray-500);
+    background: var(--bg-color);
+}
+
