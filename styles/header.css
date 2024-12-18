@@ -2,15 +2,14 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*border: 3px solid black;*/
-    height: 17rem;
+    /* border: 3px solid black; */
+    margin-top: 4rem;
 
     & div{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        height: 9rem;
 
         & #input-wrapper{
             display: flex;
@@ -24,6 +23,7 @@ header{
             border-radius: 0.75rem;
             border: 1px solid var(--gray-400);
             padding: .5rem;
+            margin-top: 2rem;
 
             & input {
                 flex: 1;
@@ -31,6 +31,7 @@ header{
                 border: none;
                 background-color: transparent;
                 font-size: var(--fs-md);
+                color: var(--gray-500);
                 padding-inline: .5rem;
 
                 & :focus-within{

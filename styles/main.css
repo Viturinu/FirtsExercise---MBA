@@ -1,0 +1,151 @@
+main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+
+    & #first-section{
+        display: flex;
+        flex-direction: column;
+        width: 23rem;
+
+        & #profile{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            background-color: var(--gray-100);
+            padding: 1rem 1rem 1rem 1rem;
+            border: 1px solid var(--gray-300);
+            border-radius: 1rem;
+            
+            & div#img{
+                position: relative;
+                z-index: 1;
+            }
+
+            & div#img::before{
+                content: "";
+                position: absolute;
+                inset: 0; /*Top, Bottom, Left e Right para elemento com position absolute*/
+                background: linear-gradient(90deg, rgb(209, 98, 116), green);
+                /* background: linear-gradient(to bottom left, pink, green); */
+                margin: -2px;
+                border-radius: .8rem;
+                z-index: -1;
+            }
+
+
+            & #profile-details{
+                display: flex;
+                align-items: flex-start;
+                margin-left: 1rem;
+                margin-right: 5.625rem;
+                /* border: 1px solid #000; */
+                
+                & strong{
+                    /* border: 1px solid #000; */
+                    position: relative;
+                    font-family: var(--ff-sans);
+                    font-weight: var(--fw-bold);
+                    font-size: var(--fs-sm);
+                    color: var(--gray-600);
+                }
+
+                & span{
+                    margin-top: .25rem;
+                    font-family: var(--ff-sans);
+                    font-weight: var(--fw-light);
+                    font-size: var(--fs-xs);
+                    color: var(--gray-600);
+                }    
+            }
+        }
+
+        & #historical{
+            display: flex;
+            margin-top: 1rem;
+            /* height: 20rem; */
+            /* width: 22.5rem; */
+            background-color: var(--gray-100);
+            border: 1px solid var(--gray-300);
+            padding:  1.75rem 1.75rem 1rem 1.50rem ;
+            border-radius: 1rem;
+
+            overflow-y: scroll;
+
+            & ::-webkit-scrollbar {
+                width: 200px;
+            }
+
+            & div#title{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-between;
+                padding-bottom: 1rem;
+
+                & span#title{
+                    text-transform: uppercase;
+                    font-size: var(--fs-xs);
+                    font-weight: var(--fw-bold);
+
+                }
+
+                & span#description{
+                    font-size: var(--fs-xs);
+                }
+            }
+
+            & div#content{
+                width: 100%;
+                height: 22.5rem;
+                border-top: 1px solid var(--gray-300);
+
+                & div#tupla{
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    justify-content: space-between;
+                    padding-block: 0.75rem;
+    
+                    & >div{
+                        & span#date{
+                            font-size: var(--fs-xs);
+                            font-weight: var(--fw-bold);
+                            color: var(--gray-600);
+                        }
+                        & span#time{
+                            margin-top: 0.3rem;
+                            font-size: var(--fs-xs);
+                            font-weight: var(--fw-light);
+                            color: var(--gray-600);
+
+                        }
+                    }
+    
+                    & div#checked-image{
+                        height: 2rem;
+                        width: 2rem;
+                        border-radius: 100%;
+                        background: rgba(69, 180, 66, 0.12) 12% url(../assets/Vector.png) no-repeat;
+                        background-position: center;
+                    }
+    
+                    /* & ::before{
+                        content: "";
+                        position: absolute;
+                        background-color: var(--gray-300);
+                        height: 1px;
+                        width: 100%;
+                        inset: 0;
+                    } */
+                }    
+            }
+        }
+    }
+
+    & #second-section{
+        display: block;
+        width: 20rem;
+        height: 20rem;
+    }
+}
