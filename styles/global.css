@@ -58,3 +58,23 @@ body{
     align-items: center;
 }
 
+@media (max-width: 424px) {
+    :root{
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    header div #input-wrapper{
+        margin-inline: 1rem;
+    }
+
+    #loyalty-card{
+        display: none;
+    }
+}
+
