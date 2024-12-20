@@ -21,8 +21,9 @@
     --gray-600: #4a4448;
     --gray-500: #756c71;
     --gray-400: #d3cfd2;
-    --gray-300: #dfdcdf;
+    --gray-300: #e9e7e9;
     --gray-100: #F4F1F2;
+    --gray-border: #DFDCDF;
 
     /*fonte*/
     --ff-sans: "Oxygen", serif;
@@ -39,7 +40,6 @@
     --fs-lg: 1rem;
     --fs-xl: 1.125rem;
     --fs-2xl: 1.5rem;
-    
 }
 
 html{
