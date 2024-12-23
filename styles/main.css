@@ -8,29 +8,34 @@ main{
     & #first-section{
         display: flex;
         flex-direction: column;
-        width: 23rem;
+        /* width: 23rem; */
 
         & #profile{
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
+            align-items: center;
             background-color: var(--gray-100);
             padding: 1rem 1rem 1rem 1rem;
             border: 1px solid var(--gray-border);
             border-radius: 1rem;
             
             & div#img{
+                display: flex;
                 position: relative;
+                align-items: center;
+                justify-content: center;
                 z-index: 1;
+
             }
 
             & div#img::before{
                 content: "";
                 position: absolute;
-                inset: 0; /*Top, Bottom, Left e Right para elemento com position absolute*/
+                inset: 0;
+                margin: -2px;
                 background: linear-gradient(90deg, rgb(209, 98, 116), green);
                 /* background: linear-gradient(to bottom left, pink, green); */
-                margin: -2px;
                 border-radius: .8rem;
                 z-index: -1;
             }
@@ -39,6 +44,7 @@ main{
             & #profile-details{
                 display: flex;
                 align-items: flex-start;
+                flex-direction: column;
                 margin-left: 1rem;
                 margin-right: 5.625rem;
                 /* border: 1px solid #000; */
@@ -64,6 +70,7 @@ main{
 
         & #historical{
             display: flex;
+            flex-direction: column;
             margin-top: 1rem;
             background-color: var(--gray-100);
             border: 1px solid var(--gray-border);
@@ -163,25 +170,22 @@ main{
     & #second-section{
         display: flex;
         flex-direction: column;
-        width: 35.5rem;
+        /* width: 35.5rem; */
 
         & #main-content{
             display: flex;
             flex-direction: column;
-            flex: 1;
             background-color: var(--gray-100);
             border-radius: 1rem;            
-            padding-bottom: 2rem;
             margin-bottom: 1rem;
+            padding-bottom: 2rem;
             border: 1px solid var(--gray-border);
         
             & #loyalty-card{
                 display: flex;
                 flex-direction: row;
                 padding: 2rem;
-                /* justify-content: space-between; */
-                width: 100%;
-
+                justify-content: space-between;
 
                 & #messages{
                     display: flex;
@@ -221,6 +225,7 @@ main{
                 grid-template-columns: repeat(5, 1fr);
                 grid-template-rows: repeat(2, 1fr);
                 gap: 1rem;
+                padding-inline: 2rem;
 
                     & .image-check{
                         position: relative;
@@ -242,6 +247,7 @@ main{
         & #count-remaining{
             display: flex;
             flex-direction: row;
+            flex: 1;
             background-color: var(--gray-100);
             width: 100%;
             border-radius: 1rem;
@@ -320,5 +326,76 @@ main{
             }
 
         }
+    }
+}
+
+@media (max-width: 381px) {
+    main{
+        margin-top: 1.25rem;
+
+        & #first-section{
+            order: 1;
+            width: 381px;
+            padding-inline: 1rem;
+
+            & #profile{
+                /* order: 1; */
+            }
+            & #historical{
+                /* order: 4; */
+            }
+        }
+
+        & #second-section{
+            order: 2;
+            width: 381px;
+            padding-inline: 1rem;
+
+            & #main-content{
+                /* order: 2; */
+                padding-top: 1.25rem;
+
+                & #loyalty-card{
+                    padding: 1.25rem;
+
+                    & #messages{
+                        width: 10.75rem;
+                    }
+
+                    & #id{    
+                        & strong{
+                            background-color: var(--gray-300);
+                            padding-block:0.375rem;
+                            padding-inline: 0.75rem;
+                            font-weight: var(--fw-bold);
+                            font-size: var(--fs-xs);
+                            border-radius: 1rem;
+                        }
+                    }
+                }
+
+                & #images-check{
+                    gap: .5rem;
+                    padding-inline: 1.25rem;
+                    & .image-check{
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        background-color: var(--gray-300);
+                        margin-top: 1.25rem;
+
+                        & img{
+                            position: absolute;
+                            height: 2.3rem;
+                            width: 2.3rem;
+                            top: 50%; 
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+                }
+            }
+        }
+
+        
     }
 }

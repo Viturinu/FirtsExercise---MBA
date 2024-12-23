@@ -1,28 +1,25 @@
 header{
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
 
-    & div{
+    & div#content{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-
+        width: 21.94rem;
+        
         & #input-wrapper{
             display: flex;
             flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            background-color: var(--gray-300);
-            padding-left: 10px;
-            width: 25rem;
-            height: 3.5rem;
+            background-color: var(--gray-border);
             border-radius: 0.75rem;
             border: 1px solid var(--gray-400);
             padding: .5rem;
             margin-top: 2rem;
+            width: 100%;
 
             & input {
                 flex: 1;
@@ -52,6 +49,25 @@ header{
                 height: 2.5rem;
                 border-radius: 0.5rem;
                 cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (max-width: 381px) {
+    header{
+        width: 381px;
+        margin-top: 2rem;
+        padding-inline: 1rem;
+
+        & div#content{
+            display: flex;
+            width: 100%;
+            
+
+            & div#input-wrapper{
+                flex: 1;
+                margin-top: 1rem;
             }
         }
     }

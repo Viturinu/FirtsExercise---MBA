@@ -58,8 +58,12 @@ body{
     align-items: center;
 }
 
-@media (max-width: 424px) {
+@media (max-width: 381px) {
     :root{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     main{
@@ -69,8 +73,8 @@ body{
         gap: 1.5rem;
     }
 
-    header div #input-wrapper{
-        margin-inline: 1rem;
+    main#first-section{
+        flex: 1;
     }
 
     #loyalty-card{
