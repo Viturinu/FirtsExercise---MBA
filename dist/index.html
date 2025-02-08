@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -9,12 +10,13 @@
     <!-- <link rel="stylesheet" href="./styles/index.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
 <script defer src="main.js"></script></head>
+
 <body>
     <header>
-        <div id="content">
+        <div id="content-header">
             <img src="./src/assets/Logo.svg" alt="Logo do Member Club" width="116" height="56">
             <div id="input-wrapper">
-                <input type="search" value="" placeholder="ID do cartão" required>
+                <input id="input" type="search" value="" placeholder="ID do cartão" required>
                 <div id="submitIcon">
                     <img src="./src/assets/Submit.svg" alt="submit button" width="20" height="20">
                 </div>
@@ -23,11 +25,11 @@
         <section id="first-section">
             <div id="profile">
                 <div id="img">
-                    <img src="./src/assets/Picture.png" alt="Profile picture">
+                    <img id="profilePicture" src="./src/assets/Picture.png" alt="Profile picture">
                 </div>
                 <div id="profile-details">
-                    <strong>Natália Miranda</strong>
-                    <span>Cliente desde 18/09/2023</span>
+                    <strong id="name">Natália Miranda</strong>
+                    <span id="clientSince">Cliente desde 18/09/2023</span>
                 </div>
             </div>
             <div id="historical">
@@ -117,7 +119,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
         <section id="second-section">
@@ -156,10 +158,10 @@
                         <img src="./src/assets/PinCheck.svg" width="64px" alt="">
                     </div>
                     <div class="image-check">
-                        
+
                     </div>
                     <div class="image-check">
-                        
+
                     </div>
                     <div class="image-check">
                         <img src="./src/assets/PinGiftGray.svg" width="40px" alt="">
@@ -190,4 +192,5 @@
 
     <!-- <script src="./javascript/effects.js"></script> -->
 </body>
+
 </html>
